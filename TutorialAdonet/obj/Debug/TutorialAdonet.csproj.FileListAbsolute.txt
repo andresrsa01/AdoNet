@@ -1,0 +1,10 @@
+C:\Users\gcalderon.STAR\Documents\Visual Studio 2013\Projects\TutorialAdonet\TutorialAdonet\bin\Debug\TutorialAdonet.exe.config
+C:\Users\gcalderon.STAR\Documents\Visual Studio 2013\Projects\TutorialAdonet\TutorialAdonet\bin\Debug\TutorialAdonet.exe
+C:\Users\gcalderon.STAR\Documents\Visual Studio 2013\Projects\TutorialAdonet\TutorialAdonet\bin\Debug\TutorialAdonet.pdb
+C:\Users\gcalderon.STAR\Documents\Visual Studio 2013\Projects\TutorialAdonet\TutorialAdonet\obj\Debug\TutorialAdonet.csprojResolveAssemblyReference.cache
+C:\Users\gcalderon.STAR\Documents\Visual Studio 2013\Projects\TutorialAdonet\TutorialAdonet\obj\Debug\TutorialAdonet.CategoriaFormulario.resources
+C:\Users\gcalderon.STAR\Documents\Visual Studio 2013\Projects\TutorialAdonet\TutorialAdonet\obj\Debug\TutorialAdonet.Form1.resources
+C:\Users\gcalderon.STAR\Documents\Visual Studio 2013\Projects\TutorialAdonet\TutorialAdonet\obj\Debug\TutorialAdonet.Properties.Resources.resources
+C:\Users\gcalderon.STAR\Documents\Visual Studio 2013\Projects\TutorialAdonet\TutorialAdonet\obj\Debug\TutorialAdonet.csproj.GenerateResource.Cache
+C:\Users\gcalderon.STAR\Documents\Visual Studio 2013\Projects\TutorialAdonet\TutorialAdonet\obj\Debug\TutorialAdonet.exe
+C:\Users\gcalderon.STAR\Documents\Visual Studio 2013\Projects\TutorialAdonet\TutorialAdonet\obj\Debug\TutorialAdonet.pdb
