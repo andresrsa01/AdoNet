@@ -246,6 +246,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Salario >";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnOrden
             // 
@@ -255,6 +256,7 @@
             this.btnOrden.TabIndex = 2;
             this.btnOrden.Text = "Descendente";
             this.btnOrden.UseVisualStyleBackColor = true;
+            this.btnOrden.Click += new System.EventHandler(this.btnOrden_Click);
             // 
             // btnBApellido
             // 
@@ -273,6 +275,7 @@
             this.btnBNombre.TabIndex = 0;
             this.btnBNombre.Text = "Nombre";
             this.btnBNombre.UseVisualStyleBackColor = true;
+            this.btnBNombre.Click += new System.EventHandler(this.btnBNombre_Click);
             // 
             // groupBox2
             // 

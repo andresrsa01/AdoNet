@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using data = TutorialAdonet._30.Data;
 using ent = TutorialAdonet._10.Entidad;
+using help = TutorialAdonet._40.Helper;
 
 namespace TutorialAdonet._20.Dominio
 {
@@ -58,6 +59,12 @@ namespace TutorialAdonet._20.Dominio
         public List<ent.Personal> ListarPersonal()
         {
             return obj.ListarPersonal();
+        }
+
+        public List<ent.Personal> PersonaLista()
+        {
+            help.ListarBaseDatos obj = new help.ListarBaseDatos();
+            return obj.traetodo();
         }
     }
 }

@@ -6,9 +6,8 @@ using System.Text;
 
 namespace TutorialAdonet._10.Entidad
 {
-    public class Personal
+    public class CategoriaPersonal
     {
-
         public int ID { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Nombre campo obligatorio")]
@@ -37,6 +36,9 @@ namespace TutorialAdonet._10.Entidad
         public string NombreCompleto { get { return string.Format("{0} {1} {2}", Nombre, ApePaterno, ApeMaterno); } }
         public string SalarioFormato { get { return string.Format("{0:C}", Salario.ToString()); } }
 
+        public int IDCate { get; set; }
 
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Categoria campo requerido")]
+        public string categoria { get; set; }
     }
 }

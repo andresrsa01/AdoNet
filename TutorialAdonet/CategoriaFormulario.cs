@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using dom = TutorialAdonet._20.Dominio;
 using ent = TutorialAdonet._10.Entidad;
+using help = TutorialAdonet._40.Helper;
 
 namespace TutorialAdonet
 {
@@ -34,8 +35,19 @@ namespace TutorialAdonet
                 categoria = txtcategoria.Text
             };
 
-            obj.RegistrarCategoria(ent);
-            dataGridView1.DataSource = obj.ListarCategoria();
+            help.Validacion<ent.Categoria> valida = new help.Validacion<ent.Categoria>();
+            string mensaje = valida.validar(ent);
+
+            if (mensaje != "Correcto")
+            {
+                MessageBox.Show(mensaje);
+            }
+            else
+            {
+
+                obj.RegistrarCategoria(ent);
+                dataGridView1.DataSource = obj.ListarCategoria();
+            }
         }
 
         private void btnModificarCategoria_Click(object sender, EventArgs e)

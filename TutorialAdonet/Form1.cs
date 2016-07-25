@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using ent = TutorialAdonet._10.Entidad;
 using dom = TutorialAdonet._20.Dominio;
+using help = TutorialAdonet._40.Helper;
 
 namespace TutorialAdonet
 {
@@ -24,7 +25,8 @@ namespace TutorialAdonet
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ListaPersonal = per.ListarPersonal();
+            //ListaPersonal = per.ListarPersonal();
+            ListaPersonal = per.PersonaLista();
             dataGridView1.DataSource = ListaPersonal;
 
             cboCategoria.DataSource = cate.ListarCategoria();
@@ -35,6 +37,7 @@ namespace TutorialAdonet
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+
             ent.Personal obj = new ent.Personal()
             {
                 Nombre = txtNombre.Text,
@@ -46,9 +49,19 @@ namespace TutorialAdonet
                 Salario = Convert.ToDecimal(txtsalario.Text)
             };
 
-            per.RegistrarPersonal(obj);
-            ListaPersonal = per.ListarPersonal();
-            dataGridView1.DataSource = ListaPersonal;
+            help.Validacion<ent.Personal> valida = new help.Validacion<ent.Personal>();
+            string mensaje = valida.validar(obj);
+
+            if (mensaje != "Correcto")
+            {
+                MessageBox.Show(mensaje);
+            }
+            else
+            {
+                per.RegistrarPersonal(obj);
+                ListaPersonal = per.ListarPersonal();
+                dataGridView1.DataSource = ListaPersonal;
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -118,6 +131,22 @@ namespace TutorialAdonet
             cboCategoria.ValueMember = "ID";
             cboCategoria.DisplayMember = "categoria";
         }
+
+        private void btnBNombre_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ListaPersonal.Where(x => x.Nombre.StartsWith(txtNombre.Text) && x.Salario > 400 ).ToList();
+        }
+
+        private void btnOrden_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ListaPersonal.OrderByDescending(x => x.ID).ToList();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ListaPersonal.Where(x => x.Salario > 150).ToList();
+        }
+
 
     }
 }

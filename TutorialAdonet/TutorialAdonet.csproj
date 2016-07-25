@@ -33,6 +33,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,11 +48,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="10.Entidad\Categoria.cs" />
+    <Compile Include="10.Entidad\CategoriaPersonal.cs" />
     <Compile Include="10.Entidad\Personal.cs" />
     <Compile Include="20.Dominio\Categoria.cs" />
     <Compile Include="20.Dominio\Personal.cs" />
     <Compile Include="30.Data\Modelo_AdoNet_Categoria.cs" />
     <Compile Include="30.Data\Modelo_AdoNet_Personal.cs" />
+    <Compile Include="40.Helper\IListarBaseDatos.cs" />
+    <Compile Include="40.Helper\IValidacion.cs" />
+    <Compile Include="40.Helper\ListarBaseDatos.cs" />
+    <Compile Include="40.Helper\Validacion.cs" />
     <Compile Include="CategoriaFormulario.cs">
       <SubType>Form</SubType>
     </Compile>
